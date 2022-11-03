@@ -1,20 +1,5 @@
-let PWM = 0
-input.onButtonPressed(Button.A, function () {
-    PWM += 100
-})
-input.onButtonPressed(Button.AB, function () {
-    PWM = 0
-})
-input.onButtonPressed(Button.B, function () {
-    PWM += -100
-})
+OLED.init(128, 64)
 basic.forever(function () {
-    pins.analogWritePin(AnalogPin.P1, PWM)
-})
-basic.forever(function () {
-    if (input.lightLevel() < 100) {
-        pins.digitalWritePin(DigitalPin.P1, 1)
-    } else {
-        pins.digitalWritePin(DigitalPin.P1, 0)
-    }
+    OLED.writeStringNewLine("Sensor1 : " + Environment.ReadSoilHumidity(AnalogPin.P1))
+    OLED.clear()
 })
