@@ -7,7 +7,7 @@ for (let index = 0; index < 100; index++) {
 }
 basic.forever(function () {
     OLED.writeNumNewLine(loadtime)
-    OLED.writeStringNewLine("Sensor1 : " + Environment.ReadSoilHumidity(AnalogPin.P1))
+    OLED.writeStringNewLine("Sensor1 : " + Environment.ReadDust(DigitalPin.P13, AnalogPin.P1))
     loadtime += 1
     OLED.clear()
 })
