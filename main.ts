@@ -1,12 +1,14 @@
 input.onButtonPressed(Button.A, function () {
-    music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
-    pins.servoWritePin(AnalogPin.P1, randint(0, 180))
+    PWM += 100
+})
+input.onButtonPressed(Button.AB, function () {
+    PWM = 0
 })
 input.onButtonPressed(Button.B, function () {
-    music.startMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once)
-    pins.servoWritePin(AnalogPin.P1, 0)
+    PWM += -100
 })
-pins.setAudioPin(AnalogPin.P10)
+let PWM = 0
+pins.digitalWritePin(DigitalPin.P1, 1)
 basic.forever(function () {
-	
+    pins.analogWritePin(AnalogPin.P1, PWM)
 })
