@@ -16,7 +16,7 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     pins.servoWritePin(AnalogPin.P1, 0)
 })
-radio.setGroup(1)
 basic.forever(function () {
-	
+    radio.setGroup(randint(0, 255))
+    basic.pause(10000)
 })
