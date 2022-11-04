@@ -7,7 +7,7 @@
         "radio": "*",
         "microphone": "*",
         "radio-broadcast": "*",
-        "Environment-and-Science-IoT": "github:tinkertanker/pxt-iot-environment-kit#v5.1.7"
+        "maqueen": "github:dfrobot/pxt-maqueen#v1.7.0"
     },
     "files": [
         "main.blocks",
