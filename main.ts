@@ -16,28 +16,29 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 function 왼쪽 () {
-	
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
 }
 input.onButtonPressed(Button.A, function () {
-    SPD += 10
+	
 })
 function 오른쪽 () {
-	
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
 }
 function 뒤로 () {
-	
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 151)
 }
 function 멈춰 () {
-	
+    maqueen.motorStop(maqueen.Motors.All)
 }
 input.onButtonPressed(Button.AB, function () {
-    SPD = 30
+	
 })
 input.onButtonPressed(Button.B, function () {
-    SPD += -10
+	
 })
 function 앞으로 () {
-	
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 151)
 }
-let SPD = 0
 radio.setGroup(247)
