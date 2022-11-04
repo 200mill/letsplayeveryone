@@ -15,22 +15,22 @@ radio.onReceivedNumber(function (receivedNumber) {
         멈춰()
     }
 })
+input.onGesture(Gesture.ScreenUp, function () {
+    radio.sendNumber(5)
+})
 function 왼쪽 () {
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
-    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 100)
 }
 input.onButtonPressed(Button.A, function () {
     radio.sendNumber(2)
-})
-input.onGesture(Gesture.FreeFall, function () {
-    radio.sendNumber(5)
 })
 input.onGesture(Gesture.Shake, function () {
     radio.sendNumber(4)
 })
 function 오른쪽 () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
-    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 100)
 }
 function 뒤로 () {
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 151)
