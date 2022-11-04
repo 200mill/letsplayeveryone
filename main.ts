@@ -1,28 +1,43 @@
 let SPD = 0
-input.onButtonPressed(Button.A, function () {
-    SPD += 10
-})
-IR.IR_callbackUser(function (message) {
-    if (message == 0) {
-        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, SPD)
-    } else if (message == 1) {
-        // turn right
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, SPD)
-    } else if (message == 2) {
-        // turn left
-        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, SPD)
-    } else if (message == 3) {
-        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, SPD)
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 1) {
+        앞으로()
+    }
+    if (receivedNumber == 2) {
+        왼쪽()
+    }
+    if (receivedNumber == 3) {
+        오른쪽()
+    }
+    if (receivedNumber == 4) {
+        뒤로()
+    }
+    if (receivedNumber == 5) {
+        멈춰()
     }
 })
+function 왼쪽 () {
+	
+}
+input.onButtonPressed(Button.A, function () {
+    radio.setGroup(247)
+    SPD += 10
+})
+function 오른쪽 () {
+	
+}
+function 뒤로 () {
+	
+}
+function 멈춰 () {
+	
+}
 input.onButtonPressed(Button.AB, function () {
     SPD = 30
 })
 input.onButtonPressed(Button.B, function () {
     SPD += -10
 })
-basic.forever(function () {
-    if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 20) {
-        maqueen.motorStop(maqueen.Motors.All)
-    }
-})
+function 앞으로 () {
+	
+}
