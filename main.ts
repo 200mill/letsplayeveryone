@@ -1,4 +1,3 @@
-let SPD = 0
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
         앞으로()
@@ -20,7 +19,6 @@ function 왼쪽 () {
 	
 }
 input.onButtonPressed(Button.A, function () {
-    radio.setGroup(247)
     SPD += 10
 })
 function 오른쪽 () {
@@ -41,3 +39,5 @@ input.onButtonPressed(Button.B, function () {
 function 앞으로 () {
 	
 }
+let SPD = 0
+radio.setGroup(247)
