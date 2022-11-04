@@ -6,8 +6,10 @@ IR.IR_callbackUser(function (message) {
     if (message == 0) {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, SPD)
     } else if (message == 1) {
+        // turn right
         maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, SPD)
     } else if (message == 2) {
+        // turn left
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, SPD)
     } else if (message == 3) {
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, SPD)
