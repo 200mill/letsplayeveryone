@@ -1,8 +1,6 @@
-input.onButtonPressed(Button.A, function () {
-    basic.showIcon(IconNames.SmallHeart)
-    basic.showIcon(IconNames.Heart)
-    basic.showIcon(IconNames.SmallHeart)
-    basic.showIcon(IconNames.Heart)
-    basic.showString("My Name")
-    basic.clearScreen()
+basic.forever(function () {
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
+    basic.pause(1000)
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
+    basic.pause(1000)
 })
