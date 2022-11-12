@@ -6,8 +6,7 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "radio-broadcast": "*",
-        "maqueen": "github:dfrobot/pxt-maqueen#v1.7.0"
+        "radio-broadcast": "*"
     },
     "files": [
         "main.blocks",
