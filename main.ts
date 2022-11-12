@@ -4,7 +4,7 @@ function turnleft () {
     basic.pause(1000)
 }
 input.onButtonPressed(Button.A, function () {
-	
+    maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
 })
 function backward () {
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
