@@ -9,7 +9,6 @@ input.onButtonPressed(Button.A, function () {
 function backward () {
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
     basic.pause(1000)
-    maqueen.motorStop(maqueen.Motors.All)
 }
 function turnright () {
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 255)
@@ -20,3 +19,12 @@ function foward () {
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
     basic.pause(1000)
 }
+basic.forever(function () {
+    basic.showString("My Name")
+    basic.showString("Your Name")
+    basic.showString("Their Name")
+    basic.showString("Our Name")
+    basic.showString("His Name")
+    basic.showString("Her Name")
+    basic.showString("UzalTV")
+})
